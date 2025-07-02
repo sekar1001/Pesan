@@ -82,5 +82,13 @@
       }
     }
   </script>
+  <script>
+  document.getElementById("goButton").addEventListener("click", function() {
+    document.body.classList.add("slide-out");
+    setTimeout(function() {
+      window.location.href = "password.html";
+    }, 500);
+  });
+</script>
 </body>
 </html>
