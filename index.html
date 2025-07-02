@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ada Pesan nih</title>
+  <style>
+    body {
+      font-family: "Libertinus Math", system-ui;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    input[type="password"] {
+      width: 80%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Masukkan Kode Rahasia</h2>
+    <input type="password" id="passwordInput" placeholder="NIM" />
+    <br/>
+    <div class="text">
+        <h2>ex: 024</h2>
+    <button onclick="checkPassword()">Lanjutkan</button>
+    <div class="error" id="errorMessage">Kode salah. Coba lagi.</div>
+    
+  </div>
+
+</body>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value.trim();
+      const redirectMap = {
+          "001": "pesan1.html",
+          "002": "pesan2.html",
+          "003": "pesan3.html",
+          // ... dan seterusnya
+          "054": "pesan54.html"
+        // tambah password lain di sini
+      };
+
+      if (redirectMap[input]) {
+        window.location.href = redirectMap[input];
+      } else {
+        document.getElementById("errorMessage").style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>

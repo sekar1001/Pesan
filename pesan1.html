@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pesan Untukmu</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #ffecec;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .card {
+      background: #fff8dc;
+      border: 2px dashed #ff9999;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      position: relative;
+      opacity: 0;
+      transform: scale(0.8);
+      animation: popUp 0.8s forwards;
+    }
+    .card:before {
+      content: "💌";
+      font-size: 40px;
+      position: absolute;
+      top: -20px;
+      left: calc(50% - 20px);
+      background: #ffecec;
+      border-radius: 50%;
+      padding: 5px;
+    }
+    h2 {
+      color: #ff6666;
+      margin-top: 10px;
+    }
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #999;
+    }
+
+    @keyframes popUp {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Pesan Spesial Untukmu!</h2>
+    <p>
+      Kamu luar biasa! Jangan pernah ragu dengan dirimu sendiri, karena kamu sangat berarti. Semoga hari-harimu selalu dipenuhi kebahagiaan 🌸
+    </p>
+    <div class="footer">
+      Dengan penuh kasih, <br/>
+      Seseorang yang peduli padamu 💖
+    </div>
+  </div>
+</body>
+</html>
+
